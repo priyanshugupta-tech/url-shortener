@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/home.css" />
+  <title>home</title>
+</head>
+
+<body>
+  <div>
+    <header>
+      <div class="navbar">
+        <div>URLs</div>
+        <div class="nav-items">
+          <% if (!locals.login) { %>
+            <div>login</div>
+            <div>sign up</div>
+            <% } else { %>
+              <div>urls</div>
+              <% } %>
+        </div>
+      </div>
+    </header>
+    <div class="divider"></div>
+    <main>
+      <div class="hero">
+        <div class="main-hero">
+          This is a simple URL Shortener by
+          <a href="https://deardeveloperr.in" target="_blank" style="color: #38bdf8; text-decoration: none">
+            Priyanshu Gupta</a>
+          <div class="supporting-hero">Turn long, messy links into clean short URLs and track every click from your
+            personal dashboard.</div>
+        </div>
+        <div></div>
+      </div>
+    </main>
+    <div class="divider"></div>
+    <footer>
+      <div class="footer">
+        <div>Copyright 2026</div>
+        <div><a href="https://deardeveloperr.in" style="color: white; text-decoration: none">Priyanshu Gupta</a></div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

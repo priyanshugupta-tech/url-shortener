@@ -1,0 +1,18 @@
+{
+  "files.associations": {
+    "*.ejs": "html"
+  },
+  "emmet.includeLanguages": {
+    "ejs": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.wordBasedSuggestions": "currentDocument",
+  "html.suggest.html5": true
+}

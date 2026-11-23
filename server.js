@@ -1,9 +1,20 @@
 const express = require("express");
-const urlRoutes = require("./routes/url.routes");
 const { DBConnect } = require("./config/db");
+const path = require("path");
+
+// Routes
+const urlRoutes = require("./routes/url.routes");
+const staticRoutes = require("./routes/static.routes");
 
 const app = express();
 const PORT = 5000;
+
+// templating engine
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+
+// static files
+app.use(express.static(path.join(__dirname, "public")));
 
 // DB connection
 DBConnect(
@@ -17,6 +28,7 @@ app.use(express.json());
 
 // Routes
 app.use("/url", urlRoutes);
+app.use("/", staticRoutes);
 
 // server
 app.listen(PORT, () => console.log("Server is listening at PORT:", PORT));
