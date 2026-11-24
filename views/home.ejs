@@ -17,11 +17,11 @@
   <div>
     <header>
       <div class="navbar">
-        <div>URLs</div>
+        <div><a href="/" style="text-decoration: none; color:white;">URLs</a></div>
         <div class="nav-items">
           <% if (!locals.login) { %>
-            <div>login</div>
-            <div>sign up</div>
+            <div><a href="/auth/login" style="text-decoration: none; color:white;">login</a></div>
+            <div><a href="/auth/signup" style="text-decoration: none; color:white;">sign up</a></div>
             <% } else { %>
               <div>urls</div>
               <% } %>
@@ -38,10 +38,19 @@
           <div class="supporting-hero">Turn long, messy links into clean short URLs and track every click from your
             personal dashboard.</div>
         </div>
-        <div></div>
       </div>
+      <div class="youtube-video">
+        <div>Check this video and my YouTube channel for some informative and knowledgeble content</div>
+        <div style="min-width: 100%;
+        min-height: 20vw; display: flex; justify-content: center;padding: 20px 20px;"><iframe width="560" height="315"
+        src="https://www.youtube.com/embed/JuXUMY5JebQ?si=TFZrRtavP3WZXnXm" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      </div>
+      <div></div>
     </main>
-    <div class="divider"></div>
+    <div class="divider-footer"></div>
     <footer>
       <div class="footer">
         <div>Copyright 2026</div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/login.css" />
+    <title>login</title>
+  </head>
+  <body>
+    <header>
+        <div class="navbar">
+            <div><a href="/" style="text-decoration: none; color:white;">URLs</a></div>
+            <div class="nav-items">
+                <% if (!locals.login) { %>
+                    <div><a href="/auth/login" style="text-decoration: none; color:white;">login</a></div>
+                    <div><a href="/auth/signup" style="text-decoration: none; color:white;">sign up</a></div>
+                    <% } else { %>
+                        <div>urls</div>
+                        <% } %>
+            </div>
+        </div>
+    </header>
+    <div class="divider"></div>
+    <div class="main-container">
+      <div class="form-container">
+        <form action="/api/auth/login" method="post">
+          <label for="email">Email</label>
+          <input id="email" type="email" autocomplete="email" name="email" />
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            autocomplete="current-password"
+          />
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+    <div class="divider-footer"></div>
+    <footer>
+      <div class="footer">
+        <div>Copyright 2026</div>
+        <div>
+          <a
+            href="https://deardeveloperr.in"
+            style="color: white; text-decoration: none"
+            >Priyanshu Gupta</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

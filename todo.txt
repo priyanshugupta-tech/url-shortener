@@ -1,0 +1,4 @@
+1. Auth routes creation
+2. Dashboard Creation
+
+yaar phali baar ejs use kar raha hu kasam se mai to abhi syntax me hi confuse ho raha hu😭😭

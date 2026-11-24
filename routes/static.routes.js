@@ -14,4 +14,8 @@ router.get("/auth/login", (req, res) => {
   return res.render("login");
 });
 
+router.get("/dashboard", (req, res) => {
+  return res.render("dashboard");
+});
+
 module.exports = router;

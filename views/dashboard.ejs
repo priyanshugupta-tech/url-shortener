@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div><a href="/" style="text-decoration: none; color:white;">URLs</a></div>
+            <div class="nav-items">
+                <% if (!locals.login) { %>
+                    <div><a href="/auth/login" style="text-decoration: none; color:white;">login</a></div>
+                    <div><a href="/auth/signup" style="text-decoration: none; color:white;">sign up</a></div>
+                    <% } else { %>
+                        <div>urls</div>
+                        <% } %>
+            </div>
+        </div>
+    </header>
+    <div class="divider"></div>
+    <main>
+        <% if (!locals.isloggedIn) { %>
+            <div class="info-text" style="font-family: Fira code,
+            -apple-system,
+            BlinkMacSystemFont,
+            Segoe UI,
+            Roboto,
+            sans-serif;; font-size: xx-large;">You are not logged In! Please login to continue.</div>
+        <% } else { %>
+            <div>Hi!</div> //continue
+        <% } %>
+    </main>
+    <div class="divider-footer"></div>
+    <footer>
+      <div class="footer">
+        <div>Copyright 2026</div>
+        <div><a href="https://deardeveloperr.in" style="color: white; text-decoration: none">Priyanshu Gupta</a></div>
+      </div>
+    </footer>
+</body>
+
+</html>
